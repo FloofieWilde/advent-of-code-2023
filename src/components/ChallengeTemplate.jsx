@@ -15,7 +15,7 @@ const ChallengeTemplate = () => {
     return (
         <div>
             <div>
-                <Title text={`Challenge ${day} : ${challenge.title}`}/>
+                <Title text={`Challenge ${day} : ${challenge.title} ${challenge.finished?"⭐":""}`}/>
                 <p className='subject'>{parse(nl2br(challenge.text))}</p>
             </div>
             <div>

@@ -83,7 +83,7 @@ const J1C1 = () => {
           </ExpansionPanel>
           <ExpansionPanel
             {...panel2Props}
-            header="Traitement file"
+            header="File processing"
           >
             <p className='step'>{TextArr.map((el, i) => (
               <p key={i}>{el}</p>
