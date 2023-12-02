@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import {nl2br} from '../utils/nl2br'
 import parse from 'html-react-parser';
 import { SolutionsMap } from '../SolutionsMap';
-import Title from './Title';
-import GoBack from './GoBack';
+import Title from '../components/Title';
+import GoBack from '../components/GoBack';
 
 
 const ChallengeTemplate = () => {

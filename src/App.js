@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-import ChallengeTemplate from './components/ChallengeTemplate';
+import ChallengeTemplate from './pages/ChallengeTemplate';
 
 function App() {
   return (
