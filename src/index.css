@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 30px;
 }
 
 code {
@@ -19,10 +20,19 @@ code {
 }
 
 .subject {
-  margin: 0 30px;
   border: 1px solid black;
   padding: 5px;
   background: gray;
   color: white;
   font-size: 90%;
+  margin-bottom: 30px;
+}
+
+.step {
+  border: 1px solid black;
+  padding: 5px;
+  background: lightgray;
+  color: black;
+  font-size: 100%;
+  margin-bottom: 30px;
 }
