@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import {
-  ExpansionList,
   ExpansionPanel,
   usePanels,
 } from "@react-md/expansion-panel";
@@ -59,7 +58,6 @@ const J2C1 = () => {
   const getObjArr = () => {
     setObjectArr(["Loading..."])
     const arr = [];
-    const regex = /\d+/g;
     TextArr.forEach(element => {
 
       const obj = {
@@ -81,7 +79,7 @@ const J2C1 = () => {
         splittedPrompt[1][i] = splittedPrompt[1][i].split(", ");
         for (let j = 0; j < splittedPrompt[1][i].length; j++) {
           splittedPrompt[1][i][j] = splittedPrompt[1][i][j].split(" ");
-          splittedPrompt[1][i][j][0] = parseInt(splittedPrompt[1][i][j][0].match(regex)[0]);
+          splittedPrompt[1][i][j][0] = parseInt(splittedPrompt[1][i][j][0]);
           if (splittedPrompt[1][i][j][1] === "red") {
             if (splittedPrompt[1][i][j][0] > obj.color.red){
               obj.color.red = splittedPrompt[1][i][j][0]
@@ -165,7 +163,7 @@ const J2C1 = () => {
           </ExpansionPanel>
           <ExpansionPanel
             {...panel5Props}
-            header="Filtering the Object Array"
+            header="Calculating the sum of the ids"
           >
             <p className='step'>
               {FilteredObjectArr.length} games found<br/><br/>
