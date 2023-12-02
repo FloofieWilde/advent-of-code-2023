@@ -11,5 +11,31 @@
             "text": "Your calculation isn't quite right. It looks like some of the digits are actually spelled out with letters: one, two, three, four, five, six, seven, eight, and nine also count as valid \"digits\".\r\n\r\nEquipped with this new information, you now need to find the real first and last digit on each line. For example:\r\n\r\ntwo1nine\r\neightwothree\r\nabcone2threexyz\r\nxtwone3four\r\n4nineeightseven2\r\nzoneight234\r\n7pqrstsixteen\r\n\r\nIn this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76. Adding these together produces 281.",
             "finished": true
         }
+    },
+    {
+        "id": "2",
+        "challenge1": {
+            "title": "Unknown",
+            "text": "Unknown",
+            "finished": false
+        },
+        "challenge2": {
+            "title": "Unknown",
+            "text": "Unknown",
+            "finished": false
+        }
+    },
+    {
+        "id": "3",
+        "challenge1": {
+            "title": "Unknown",
+            "text": "Unknown",
+            "finished": false
+        },
+        "challenge2": {
+            "title": "Unknown",
+            "text": "Unknown",
+            "finished": false
+        }
     }
 ]

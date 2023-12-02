@@ -36,3 +36,29 @@ code {
   font-size: 100%;
   margin-bottom: 30px;
 }
+
+.goBack {
+  padding: 3px 10px;
+  width: min-content;
+  color: black;
+  font-size: 2rem !important;
+  cursor: pointer;
+  position: absolute;
+}
+
+.material-symbols-outlined {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+  color: gray;
+  transition: all 0.2s ease-in-out;
+}

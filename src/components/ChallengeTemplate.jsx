@@ -5,6 +5,7 @@ import {nl2br} from '../utils/nl2br'
 import parse from 'html-react-parser';
 import { SolutionsMap } from '../SolutionsMap';
 import Title from './Title';
+import GoBack from './GoBack';
 
 
 const ChallengeTemplate = () => {
@@ -14,6 +15,7 @@ const ChallengeTemplate = () => {
 
     return (
         <div>
+            <GoBack/>
             <div>
                 <Title text={`Challenge ${day} : ${challenge.title} ${challenge.finished?"⭐":""}`}/>
                 <p className='subject'>{parse(nl2br(challenge.text))}</p>
