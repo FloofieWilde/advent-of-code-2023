@@ -2,7 +2,7 @@ import React from 'react'
 
 const J3C2 = () => {
   return (
-    <div>J3C2</div>
+    <div>Vide</div>
   )
 }
 
