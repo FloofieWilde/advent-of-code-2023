@@ -8,8 +8,8 @@ import J4C1 from './components/solutions/J4/J4C1'
 import J4C2 from './components/solutions/J4/J4C2'
 import J5C1 from './components/solutions/J5/J5C1'
 import J5C2 from './components/solutions/J5/J5C2'
-// import J6C1 from './components/solutions/J6/J6C1'
-// import J6C2 from './components/solutions/J6/J6C2'
+import J6C1 from './components/solutions/J6/J6C1'
+import J6C2 from './components/solutions/J6/J6C2'
 // import J7C1 from './components/solutions/J7/J7C1'
 // import J7C2 from './components/solutions/J7/J7C2'
 // import J8C1 from './components/solutions/J8/J8C1'
@@ -60,4 +60,6 @@ export const SolutionsMap = {
     J4C2,
     J5C1,
     J5C2,
+    J6C1,
+    J6C2,
 };

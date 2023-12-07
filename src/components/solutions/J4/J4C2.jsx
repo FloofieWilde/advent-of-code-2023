@@ -16,7 +16,7 @@ const J4C2 = () => {
     const [panels, onKeyDown] = usePanels({
         idPrefix: "simple-panels",
         count: 5,
-        defaultExpandedIndex: 3,
+        defaultExpandedIndex: 4,
       });
       const [panel1Props, panel2Props, panel3Props, panel4Props, panel5Props] = panels;
 
