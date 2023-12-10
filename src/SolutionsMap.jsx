@@ -50,16 +50,16 @@ import J6C2 from './components/solutions/J6/J6C2'
 // import J25C2 from './components/solutions/J25/J25C2'
 
 export const SolutionsMap = {
-    J1C1,
-    J1C2,
-    J2C1,
-    J2C2,
-    J3C1,
-    J3C2,
-    J4C1,
-    J4C2,
-    J5C1,
-    J5C2,
-    J6C1,
-    J6C2,
-};
+  J1C1,
+  J1C2,
+  J2C1,
+  J2C2,
+  J3C1,
+  J3C2,
+  J4C1,
+  J4C2,
+  J5C1,
+  J5C2,
+  J6C1,
+  J6C2
+}

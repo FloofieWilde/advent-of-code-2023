@@ -1,9 +1,9 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Home from './pages/Home';
-import ChallengeTemplate from './pages/ChallengeTemplate';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import Home from './pages/Home'
+import ChallengeTemplate from './pages/ChallengeTemplate'
 
-function App() {
+function App () {
   return (
     <BrowserRouter>
       <Routes>
@@ -11,7 +11,7 @@ function App() {
         <Route path="/:day/:chall" element={<ChallengeTemplate/>} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

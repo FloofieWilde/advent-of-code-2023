@@ -5,7 +5,7 @@ const GoBack = () => {
   return (
     <div className='goBack'>
         <Link to='/'>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
                 arrow_back
             </span>
         </Link>
