@@ -55,7 +55,6 @@ const J6C1 = () => {
       })
     }
     setTextArr(arr)
-    console.log('TextArr', arr)
   }
   const getPossibilitiesArr = () => {
     setPossibilitiesArr(['Loading...'])
@@ -115,7 +114,7 @@ const J6C1 = () => {
               : PossibilitiesArr[0]}</p>
           </ExpansionPanel>
           <ExpansionPanel
-            {...panel3Props}
+            {...panel4Props}
             header="Calculate the number of possibilities"
           >
             <p className='step'>
