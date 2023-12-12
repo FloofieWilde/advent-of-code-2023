@@ -44,7 +44,7 @@ const J7C1 = () => {
     full: 4,
     three: 3,
     twoPair: 2,
-    two: 1,
+    pair: 1,
     high: 0
   }
 
@@ -111,7 +111,7 @@ const J7C1 = () => {
       full: [],
       three: [],
       twoPair: [],
-      two: [],
+      pair: [],
       high: []
     }
     TextArr.forEach((type, i) => {
@@ -143,7 +143,7 @@ const J7C1 = () => {
             orderedCardsObj.three.push(type)
             break
           case 2:
-            orderedCardsObj.two.push(type)
+            orderedCardsObj.pair.push(type)
             break
           case 1:
             orderedCardsObj.high.push(type)
@@ -158,46 +158,33 @@ const J7C1 = () => {
   const orderCardsByScore = () => {
     setCompletely(['Loading...'])
     const orderedCardsArr = []
-    Object.keys(SortByGame).reverse().forEach((key) => {
-      const orderByComboCard = {}
-      cardTypesRev.forEach((type) => {
-        orderByComboCard[type] = []
+    Object.keys(SortByGame).forEach((key) => {
+      const cards = SortByGame[key]
+      cards.forEach((card, i) => {
+        if (typeof SortByGame[key][i][0] !== 'string') {
+          SortByGame[key][i][0] = card[0].join('')
+        }
       })
-      const type = SortByGame[key]
-      type.forEach((hand) => {
-        const countedCards = hand[2]
-        let highestCard = 2
-        let combo = 0
-        Object.keys(countedCards).forEach((key2) => {
-          if (countedCards[key2] === combo) {
-            if (cardTypesScores[key2] > cardTypesScores[highestCard]) {
-              highestCard = key2
-            }
-          } else if (countedCards[key2] > combo) {
-            combo = countedCards[key2]
-            highestCard = key2
-          }
-        })
-        // eslint-disable-next-line no-unused-expressions
-        typeof hand[0] === 'string' ? null : hand[0] = hand[0].join('')
-        orderByComboCard[highestCard].push(hand)
-      })
-      Object.keys(orderByComboCard).forEach((key3) => {
-        orderByComboCard[key3] = orderByComboCard[key3].sort()
-      })
-      cardTypesRev.forEach((type2) => {
-        orderedCardsArr.push(...orderByComboCard[type2])
-      })
+      SortByGame[key].sort()
+      orderedCardsArr.push(...SortByGame[key])
     })
+
     console.log(orderedCardsArr)
     setCompletely(orderedCardsArr)
   }
   const getScore = () => {
     setScore('Loading...')
-    const score = SortCompletely.reduce((a, b, i) => { return a + b[1] * (i + 1) }, 0)
+    const score = SortCompletely.reduce((a, b, i) => {
+      return a + b[1] * (i + 1)
+    }, 0)
     console.log(score)
     console.log(248105065)
     setScore(score)
+  }
+  function compareCards (cardA, cardB) {
+    const indexA = cardTypes.indexOf(cardA[0].charAt(0))
+    const indexB = cardTypes.indexOf(cardB[0].charAt(0))
+    return indexA[0] - indexB[0]
   }
 
   return (
