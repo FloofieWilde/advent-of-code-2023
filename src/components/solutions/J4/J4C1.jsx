@@ -13,7 +13,7 @@ const J4C1 = () => {
   const [Counter, setCounter] = useState(['Loading...'])
   const [Score, setScore] = useState(0)
 
-  const [panels, onKeyDown] = usePanels({
+  const [panels] = usePanels({
     idPrefix: 'simple-panels',
     count: 5,
     defaultExpandedIndex: 3
@@ -64,11 +64,15 @@ const J4C1 = () => {
           if (arr[i][1][j][0] === '') {
             arr[i][1][j].splice(0, 1)
           }
+          return 0
         })
+        return 0
       })
+      return 0
     })
     arr.map((el, i) => {
       retArr.push(el[1])
+      return 0
     })
     setObjectArr(retArr)
   }

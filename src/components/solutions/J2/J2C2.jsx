@@ -11,18 +11,12 @@ const J2C2 = () => {
   const [ObjectArr, setObjectArr] = useState(['Loading...'])
   const [Powers, setPowers] = useState(['Loading...'])
 
-  const [panels, onKeyDown] = usePanels({
+  const [panels] = usePanels({
     idPrefix: 'simple-panels',
     count: 5,
     defaultExpandedIndex: 3
   })
-  const [panel1Props, panel2Props, panel3Props, panel4Props, panel5Props] = panels
-
-  const searchedCubes = {
-    red: 12,
-    blue: 14,
-    green: 13
-  }
+  const [panel1Props, panel2Props, panel3Props, panel4Props] = panels
 
   useEffect(() => {
     getTxt()

@@ -10,12 +10,12 @@ const J6C2 = () => {
   const [TextArr, setTextArr] = useState(['Loading...'])
   const [PossibilitiesArr, setPossibilitiesArr] = useState(['Loading...'])
 
-  const [panels, onKeyDown] = usePanels({
+  const [panels] = usePanels({
     idPrefix: 'simple-panels',
     count: 5,
     defaultExpandedIndex: 3
   })
-  const [panel1Props, panel2Props, panel3Props, panel4Props, panel5Props] = panels
+  const [panel1Props, panel2Props, panel3Props, panel4Props] = panels
 
   useEffect(() => {
     getTxt()

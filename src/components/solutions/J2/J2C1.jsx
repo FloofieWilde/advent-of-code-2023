@@ -12,7 +12,7 @@ const J2C1 = () => {
   const [FilteredObjectArr, setFilteredObjectArr] = useState(['Loading...'])
   const [FilteredIds, setFilteredIds] = useState(['Loading...'])
 
-  const [panels, onKeyDown] = usePanels({
+  const [panels] = usePanels({
     idPrefix: 'simple-panels',
     count: 5,
     defaultExpandedIndex: 3
