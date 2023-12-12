@@ -31,12 +31,6 @@ const J6C1 = () => {
     }
   }, [TextArr])
 
-  useEffect(() => {
-    if (TextArr[0] !== 'Loading...') {
-      getCalc()
-    }
-  }, [PossibilitiesArr])
-
   const getTxt = async () => {
     setText('Loading...')
     const text = await axios.get('/files/J6C1.txt')
@@ -71,8 +65,6 @@ const J6C1 = () => {
       }
     }
     setPossibilitiesArr(arr)
-  }
-  const getCalc = () => {
   }
 
   return (
