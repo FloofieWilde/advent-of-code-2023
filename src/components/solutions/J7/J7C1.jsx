@@ -166,7 +166,8 @@ const J7C1 = () => {
         }
       })
       SortByGame[key].sort()
-      orderedCardsArr.push(...SortByGame[key])
+      // Push the cards in the array at the biginning
+      orderedCardsArr.unshift(...SortByGame[key])
     })
 
     console.log(orderedCardsArr)
