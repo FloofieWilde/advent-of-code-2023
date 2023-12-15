@@ -133,12 +133,10 @@ const J7C2 = () => {
       if ((((askFull + wildCardNum === 5) && (wildCardNum === 0 || wildCardNum === 1)) ||
       ((askFull + wildCardNum === 4) && (wildCardNum === 1))) &&
       (askFull !== 3)) {
-        console.log(type[0], askFull, wildCardNum)
         orderedCardsObj.full.push(type)
       } else if (askFull === 4 && wildCardNum === 0) {
         orderedCardsObj.twoPair.push(type)
       } else {
-        // console.log(maxCard, wildCardNum, maxCard + wildCardNum)
         switch (maxCard + wildCardNum) {
           case 5:
             orderedCardsObj.five.push(type)
@@ -160,7 +158,6 @@ const J7C2 = () => {
         }
       }
     })
-    console.log(orderedCardsObj)
     setSortByGame(orderedCardsObj)
   }
   const orderCardsByScore = () => {
