@@ -21,8 +21,6 @@ const J7C1 = () => {
   })
   const [panel1Props, panel2Props, panel3Props, panel4Props] = panels
   const cardTypes = ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2']
-  const cardTypesRev = cardTypes
-  cardTypesRev.reverse()
   const cardTypesScores = {
     A: 13,
     K: 12,
@@ -106,13 +104,13 @@ const J7C1 = () => {
   const orderCardsByWin = () => {
     setSortByGame(['Loading...'])
     const orderedCardsObj = {
-      five: [],
-      four: [],
-      full: [],
-      three: [],
-      twoPair: [],
+      high: [],
       pair: [],
-      high: []
+      twoPair: [],
+      three: [],
+      full: [],
+      four: [],
+      five: []
     }
     TextArr.forEach((type, i) => {
       const cardsCount = type[2]
@@ -157,20 +155,14 @@ const J7C1 = () => {
   }
   const orderCardsByScore = () => {
     setCompletely(['Loading...'])
-    const orderedCardsArr = []
+    let orderedCardsArr = []
     Object.keys(SortByGame).forEach((key) => {
       const cards = SortByGame[key]
-      cards.forEach((card, i) => {
-        if (typeof SortByGame[key][i][0] !== 'string') {
-          SortByGame[key][i][0] = card[0].join('')
-        }
-      })
-      SortByGame[key].sort()
-      // Push the cards in the array at the biginning
-      orderedCardsArr.unshift(...SortByGame[key])
+      // SortByGame[key].sort()
+      SortByGame[key].sort(compareCards)
+      orderedCardsArr = [...orderedCardsArr, ...cards]
     })
 
-    console.log(orderedCardsArr)
     setCompletely(orderedCardsArr)
   }
   const getScore = () => {
@@ -178,14 +170,16 @@ const J7C1 = () => {
     const score = SortCompletely.reduce((a, b, i) => {
       return a + b[1] * (i + 1)
     }, 0)
-    console.log(score)
-    console.log(248105065)
     setScore(score)
   }
-  function compareCards (cardA, cardB) {
-    const indexA = cardTypes.indexOf(cardA[0].charAt(0))
-    const indexB = cardTypes.indexOf(cardB[0].charAt(0))
-    return indexA[0] - indexB[0]
+  const compareCards = (a, b) => {
+    for (let i = 0; i < a.length; i++) {
+      for (let j = 0; j < cardTypes.length; j++) {
+        if (cardTypesScores[a[i][j]] !== cardTypesScores[b[i][j]]) {
+          return cardTypesScores[a[i][j]] - cardTypesScores[b[i][j]]
+        }
+      }
+    }
   }
 
   return (
@@ -225,8 +219,7 @@ const J7C1 = () => {
             header="Calculate the score"
           >
             <p className='step'>
-              Score : {Score} <br/>
-              Cherché : 248105065
+              Score : {Score}
             </p>
           </ExpansionPanel>
     </div>
