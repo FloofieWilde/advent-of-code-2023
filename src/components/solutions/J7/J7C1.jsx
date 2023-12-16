@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-// TWO PAIRS
 import React, { useEffect, useState } from 'react'
 import {
   ExpansionPanel,
@@ -35,15 +33,6 @@ const J7C1 = () => {
     4: 3,
     3: 2,
     2: 1
-  }
-  const cardCombo = {
-    five: 6,
-    four: 5,
-    full: 4,
-    three: 3,
-    twoPair: 2,
-    pair: 1,
-    high: 0
   }
 
   useEffect(() => {
